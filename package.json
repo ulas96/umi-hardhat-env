@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@aptos-labs/ts-sdk": "^2.0.1",
+    "@moved/hardhat-plugin": "^0.1.1",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.24.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
+  }
+}
