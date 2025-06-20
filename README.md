@@ -22,7 +22,7 @@ Hardhat development environment for deploying Move smart contracts on UMI Networ
 
 `aptos help`
 
-- If `aptos` is not automatically added as path varaible, it can be added with the following command. The path of the saved bin file is shown at the end of the first step. Shell configuration file may be updated according to your configuration, in this case it is `~/.zshrc`
+- If `aptos` is not automatically added as path varaible, it can be added with the following command. The path of the saved bin file is shown after installing Aptos CLI. Shell configuration file may be updated according to your configuration, in this case it is `~/.zshrc`
 
 `echo 'export PATH="$PATH:/path/to/bin/file"' >> ~/.zshrc`
 
