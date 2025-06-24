@@ -52,7 +52,6 @@ async function fetchCounterValue() {
 
     const address = AccountAddress.fromString(moduleAddress);
 
-    // Build the entry function call for get
     const entryFunction = EntryFunction.build(
       `${moduleAddress}::Counter`,
       "get",
@@ -60,20 +59,17 @@ async function fetchCounterValue() {
       [address]
     );
 
-    // Create transaction payload
     const transactionPayload = new TransactionPayloadEntryFunction(
       entryFunction
     );
     const payloadResult = transactionPayload.bcsToHex();
 
-    // Convert Uint8Array to hex string
     const payload =
       "0x" +
       Array.from(payloadResult.data)
         .map((byte) => byte.toString(16).padStart(2, "0"))
         .join("");
 
-    // Call the contract
     const request = {
       to: deployer.address,
       data: payload,
