@@ -44,14 +44,12 @@ async function fetchCounterValue() {
   try {
     console.log("Account:", deployer.address);
 
-    // Format address properly
     const addressWithoutPrefix = deployer.address.slice(2).toLowerCase();
     const paddedAddress = addressWithoutPrefix.padStart(64, "0");
     const moduleAddress = "0x" + paddedAddress;
 
     console.log("Module:", `${moduleAddress}::Counter`);
 
-    // Create the address parameter for the get function
     const address = AccountAddress.fromString(moduleAddress);
 
     // Build the entry function call for get
